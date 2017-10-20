@@ -1,0 +1,13 @@
+{
+    "name": "q2a child theme",
+    "uri": "https://github.com/fardina/q2a-child-theme",
+    "description": "By using this plugin you will ensure that your modifications are preserved",
+    "version": "1.0",
+    "date": "2017-10-20",
+    "author": "fardina",
+    "author_uri": "https://github.com/fardina",
+    "license": "GPLv2",
+    "update_uri": "Web address for Q2A to check for updates",
+    "min_q2a": "1.3",
+    "min_php": "5.1",
+}
