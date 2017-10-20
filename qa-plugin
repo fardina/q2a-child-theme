@@ -1,7 +1,7 @@
 <?php
 /*
-  Plugin Name: child theme
-  Plugin URI:
+  Plugin Name: q2a child theme
+  Plugin URI:https://github.com/fardina/q2a-child-theme
   Plugin Description: By using a child theme you will ensure that your modifications are preserved
   Plugin Version: 1.0
   Plugin Date: 2017-10-20
@@ -9,7 +9,7 @@
   Plugin Author URI:
   Plugin License: GPLv2
   Plugin Minimum Question2Answer Version: 1.5
-  Plugin Update Check URI:
+  Plugin Update Check URI: https://github.com/fardina/q2a-child-theme/blob/master/metadata.json
 */
 
 if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
