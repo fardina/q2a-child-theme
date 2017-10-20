@@ -9,5 +9,5 @@
     "license": "GPLv2",
     "update_uri": "https://raw.githubusercontent.com/fardina/q2a-child-theme/master/metadata.json",
     "min_q2a": "1.3",
-    "min_php": "5.1",
+    "min_php": "5.1"
 }
