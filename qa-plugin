@@ -1,0 +1,22 @@
+<?php
+/*
+  Plugin Name: child theme
+  Plugin URI:
+  Plugin Description: By using a child theme you will ensure that your modifications are preserved
+  Plugin Version: 1.0
+  Plugin Date: 2017-10-20
+  Plugin Author: fardina
+  Plugin Author URI:
+  Plugin License: GPLv2
+  Plugin Minimum Question2Answer Version: 1.5
+  Plugin Update Check URI:
+*/
+
+if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
+  header('Location: ../../');
+  exit;
+}
+qa_register_plugin_layer(
+  'child-theme-layer.php', // PHP file containing layer
+  'child theme layer' // human-readable name of layer
+);
