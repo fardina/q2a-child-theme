@@ -21,3 +21,9 @@ qa_register_plugin_layer(
   'child-theme-layer.php', // PHP file containing layer
   'child theme layer' // human-readable name of layer
 );
+qa_register_plugin_module(
+  'module', // type of module
+  'child-theme-admin-form.php', // PHP file containing module class
+  'child_theme_admin_form', // module class name in that PHP file
+  'child theme layer' // human-readable name of module
+);
