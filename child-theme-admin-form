@@ -1,54 +1,37 @@
 <?php
 
 
-	class child_theme_admin_form {
+class child_theme_admin_form
+{
 
-		function option_default($option) {
-			switch($option) {
-				case 'child_theme_on':
-					return 1; // true
-				default:
-					return null;				
-			}
+	public function admin_form(&$qa_content)
+	{
+		$saved = qa_clicked('child_theme_save_button');
+
+		if ($saved) {
+			qa_opt('child_theme_on', (int) qa_post_text('child_theme_on_field'));
 		}
-			
-		function allow_template($template) {
-			return ($template!='admin');
-		}       
-			
-		function admin_form(&$qa_content){                       
 
-			// process the admin form if admin hit Save-Changes-button
-			$ok = null;
-			if (qa_clicked('child_theme_save_button')) {
-				qa_opt('child_theme_on', (bool)qa_post_text('child_theme_on')); // empty or 1
-				$ok = 'your setting saved';
-			}
-			
-			// form fields to display frontend for admin
-			$fields = array();
-			
-			$fields[] = array(
-				'type' => 'checkbox',
-				'label' => 'enable plugin',
-				'tags' => 'NAME="child_theme_on"',
-				'value' => qa_opt('child_theme_on'),
-			);
-			
-			return array(           
-				'ok' => ($ok && !isset($error)) ? $ok : null,
-				'fields' => $fields,
-				'buttons' => array(
-					array(
-						'label' => 'save',
-						'tags' => 'name="child_theme_save"',
-					),
+
+		return array(
+			'ok' => $saved ? 'child theme settings saved' : null,
+
+			'fields' => array(
+				array(
+					'label' => 'use child theme plugin to change the css',
+					'type' => 'checkbox',
+					'value' => qa_opt('child_theme_on'),
+					'tags' => 'name="child_theme_on_field" id="child_theme_on_field"',
 				),
-			);
-		}
+
+		    ),
+
+			'buttons' => array(
+				array(
+					'label' => 'Save Changes',
+					'tags' => 'name="child_theme_save_button"',
+				),
+			),
+		);
 	}
-
-
-/*
-	Omit PHP closing tag to help avoid accidental output
-*/
+}
