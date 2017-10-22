@@ -40,7 +40,7 @@ class child_theme_admin_form
 				),
                 array(
 				    'label' => 'child theme css stylesheet',
-				    'tags' => 'NAME="child_theme_css"',
+				    'tags' => 'NAME="child_theme_css" placeholder="your modifications here... "',
 				    'value' => qa_opt('child_theme_css'),
 			    	'rows' => 20,
 				    'type' => 'textarea',
